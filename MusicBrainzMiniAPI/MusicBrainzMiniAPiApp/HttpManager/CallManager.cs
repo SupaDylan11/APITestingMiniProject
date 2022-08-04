@@ -18,9 +18,12 @@ public class CallManager
         _client = new RestClient(AppConfigReader.BaseUrl);
     }
 
-    public async Task<string> MakeRequestAsync()
+    public async Task<string> MakeRequestAsync(string query)
     {
-
+        var request = new RestRequest();
+        request.AddHeader("Content-Type", "application/json");
+        request.Resource = $"release/{query}?fmt=json";
+        Response = await _client.ExecuteAsync(request);
+        return Response.Content;
     }
-
 }
