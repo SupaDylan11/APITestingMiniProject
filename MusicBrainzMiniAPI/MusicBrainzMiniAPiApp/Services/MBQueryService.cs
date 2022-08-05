@@ -4,35 +4,31 @@ using Newtonsoft.Json.Linq;
 
 namespace MusicBrainzMiniAPiApp.Services;
 
-public class MBSingleReleaseService
+public class MBQueryService
 {
     public CallManager CallManager { get; set; }
 
     public JObject JSonResponse { get; set; }
 
-    public DTO<SingleReleaseReponse> MusicBrainzDTO { get; set; }
+    public DTO<QueryResponse> MusicBrainzDTO { get; set; }
 
     public string MusicResponse { get; set; }
 
-    public MBSingleReleaseService()
+    public MBQueryService()
     {
         CallManager = new CallManager();
-        MusicBrainzDTO = new DTO<SingleReleaseReponse>();
+        MusicBrainzDTO = new DTO<QueryResponse>();
     }
 
     public async Task MakeMusicRequestAsync(string query)
     {
-        MusicResponse = await CallManager.MakeRequestAsync(query);
+        MusicResponse = await CallManager.MakeRequestAsync(ResourceType.SEARCH, query);
         JSonResponse = JObject.Parse(MusicResponse);
         MusicBrainzDTO.DeserialiseResponse(MusicResponse);
     }
 
-    public string GetTitle()
+    public int GetStatus()
     {
-        return (string)JSonResponse["title"];
-    }
-    public string GetStatus() 
-    {
-        return CallManager.Response.StatusCode.ToString();
+        return (int)CallManager.Response.StatusCode;
     }
 }
