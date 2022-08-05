@@ -90,4 +90,8 @@ We test against three different GET requests, as per the MusicBrainz documentati
 - browse:   ```/<RESULT_ENTITY_TYPE>?<BROWSING_ENTITY_TYPE>=<MBID>&limit=<LIMIT>&offset=<OFFSET>&inc=<INC>```
 - search:   ```/<ENTITY_TYPE>?query=<QUERY>&limit=<LIMIT>&offset=<OFFSET>```
 
-
+The tests check for the following properties:
+- title
+- date
+- cover art
+- country
