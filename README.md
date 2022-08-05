@@ -4,7 +4,7 @@
 This is a api mini testing project.
 
 >
-# 1. Instructions
+# 1. Information
 
 ## 1.1 Using the API
 Include the text for Instruction to the API here
