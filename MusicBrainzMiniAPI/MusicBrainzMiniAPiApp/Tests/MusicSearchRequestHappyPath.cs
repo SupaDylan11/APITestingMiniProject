@@ -38,8 +38,14 @@ public class MusicSearchRequestHappyPathTests
     }
 
     [Test]
-    public void GivenValidSearchQuery_Group_ReturnsExpectedArtistGroupType()
+    public void GivenValidSearchQuery_disambiguation_ReturnsExpectedArtistdisambiguationType()
     {
         Assert.That(_singleReleaseService.MusicBrainzDTO.Response.artists[0].disambiguation, Is.EqualTo("90s US grunge band"));
+    }
+
+    [Test]
+    public void GivenValidSearchQuery_Group_ReturnsExpectedArtistGroupType()
+    {
+        Assert.That(_singleReleaseService.MusicBrainzDTO.Response.artists[0].type, Is.EqualTo("Group"));
     }
 }
