@@ -21,8 +21,8 @@ public class InvalidLookupSpecificReleaseTests
     }
 
     [Test]
-    public void GivenAnInvalidSpecificRelease_LookupRequest_ReturnsBadRequest()
+    public void GivenAnInvalidSpecificRelease_LookupRequest_Returns400()
     {
-        Assert.That(_singleReleaseService.GetStatus(), Is.EqualTo("BadRequest"));
+        Assert.That(_singleReleaseService.GetStatus(), Is.EqualTo(400));
     }
 }
