@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="MusicBrainzMiniAPiApp.Services.SingleReleaseReponse" BaseTypeListCollapsed="true">
+    <Position X="8.25" Y="0.5" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAwAISEAAAAAAAAEEAAAAAAAAAAACACIEAQAAAgA=</HashCode>
+      <FileName>Services\SingleReleaseModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MusicBrainzMiniAPiApp.Services.TextRepresentation">
+    <Position X="8.25" Y="4.5" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Services\SingleReleaseModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MusicBrainzMiniAPiApp.Services.CoverArtArchive">
+    <Position X="12" Y="4.5" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAARAAAAAABAAAAAAAAAAAAAABAAAAAAAAAAA=</HashCode>
+      <FileName>Services\SingleReleaseModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MusicBrainzMiniAPiApp.Services.ReleaseEvents">
+    <Position X="12" Y="3" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAE=</HashCode>
+      <FileName>Services\SingleReleaseModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MusicBrainzMiniAPiApp.Services.Area">
+    <Position X="12" Y="0.5" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAGAAAAAAAAAAAAAgAAAAFAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>Services\SingleReleaseModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MusicBrainzMiniAPiApp.Services.MBSingleReleaseService">
+    <Position X="4" Y="0.5" Width="4" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAQAAAAAAACAAAAAAQAAAAAACAAAAAAAAQAAA=</HashCode>
+      <FileName>Services\MBSingleReleaseService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MusicBrainzMiniAPiApp.DataHandling.DTO&lt;ResponseType&gt;">
+    <Position X="0.5" Y="4" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAgABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Services\DataHandling\DTO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MusicBrainzMiniAPiApp.HttpManager.CallManager">
+    <Position X="0.5" Y="1.5" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAABgAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>HttpManager\CallManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="MusicBrainzMiniAPiApp.DataHandling.IResponse">
+    <Position X="0.5" Y="0.5" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Services\DataHandling\IResponse.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
