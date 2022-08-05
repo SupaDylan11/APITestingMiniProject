@@ -99,7 +99,7 @@ The lookup release tests check for the following properties:
 
 ### 1.4.2 Browse Coverage
 The browse release tests check for the following properties:
-(pending)
+- release count
 
 ### 1.4.3 Search Coverage
 The search release tests check for the following properties:
