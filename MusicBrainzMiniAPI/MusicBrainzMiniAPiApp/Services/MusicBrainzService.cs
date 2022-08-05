@@ -2,7 +2,7 @@
 using MusicBrainzMiniAPiApp.HttpManager;
 using Newtonsoft.Json.Linq;
 
-namespace MusicBrainzMiniAPiApp;
+namespace MusicBrainzMiniAPiApp.Services;
 
 public class MusicBrainzService
 {
@@ -10,7 +10,7 @@ public class MusicBrainzService
 
     public JObject JSonResponse { get; set; }
 
-    public DTO<SingleReleaseReponse> MusicBrainzDTO { get; set;}
+    public DTO<SingleReleaseReponse> MusicBrainzDTO { get; set; }
 
     public string MusicResponse { get; set; }
 
