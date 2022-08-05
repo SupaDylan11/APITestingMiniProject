@@ -20,7 +20,7 @@ public class ValidLookupSpecificReleaseTests
     }
 
     [Test]
-    public void GivenAValidSpecificRelease_LookupRequest_ReturnsBadRequest()
+    public void GivenAValidSpecificRelease_LookupRequest_ReturnsOK()
     {
         Assert.That(_singleReleaseService.GetStatus(), Is.EqualTo("OK"));
     }
