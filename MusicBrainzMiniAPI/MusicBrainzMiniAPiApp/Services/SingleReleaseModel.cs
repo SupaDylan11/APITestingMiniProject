@@ -1,10 +1,12 @@
-﻿using System;
+﻿using MusicBrainzMiniAPiApp.DataHandling;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Newtonsoft.Json;
 
-namespace MusicBrainzMiniAPiApp.DataHandling;
+namespace MusicBrainzMiniAPiApp.Services;
 
 
 public class SingleReleaseReponse : IResponse
@@ -21,6 +23,8 @@ public class SingleReleaseReponse : IResponse
     public string disambiguation { get; set; }
     public string country { get; set; }
     public string statusid { get; set; }
+
+    [JsonProperty("cover-art-archive")]
     public CoverArtArchive coverartarchive { get; set; }
     public string status { get; set; }
     public string quality { get; set; }

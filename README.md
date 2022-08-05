@@ -3,30 +3,86 @@
 # APITestingMiniProject
 This is a api mini testing project.
 
->
-# Instructions
+[TOC]
 
+>
+# 1. Instructions
+
+## 1.1 Using the API
 Include the text for Instruction to the API here
   
-## Extenstions
+Documentation for the API is available from https://musicbrainz.org/doc/MusicBrainz_API
+
+## 1.2 Extensions
   
-Include the text for possible extension here
-  
-## Class Diagram
+Adding a new service requires the addition of two Class files
+- The Service class file (e.g. `MBSingleReleaseService.cs`)
+- The Data Model class file (e.g. `SingleReleaseModel.cs`)
 
-Include the class diagram here at the end of the project
-  
->
-# Project Board / Sprint
-## Day 1
-![image](https://user-images.githubusercontent.com/88229692/182905752-e93e72a4-0a29-4a80-aa22-cf57016628e5.png)
-- > 
-![image](https://user-images.githubusercontent.com/88229692/182905706-63ca1db0-d7cc-4267-a98a-3e687de0dccb.png)
+### 1.2.1 The Service class
+
+#### Dependencies
+```csharp
+using MusicBrainzMiniAPiApp.DataHandling;
+using MusicBrainzMiniAPiApp.HttpManager;
+using Newtonsoft.Json.Linq;
+```
+
+#### Namespace
+```csharp
+namespace MusicBrainzMiniAPiApp.Services;
+```
+
+#### Public Properties
+
+```csharp
+public CallManager CallManager { get; set; }
+public JObject JSonResponse { get; set; }
+public DTO<SingleReleaseReponse> MusicBrainzDTO { get; set; }
+public string MusicResponse { get; set; }
+```
+#### Public Methods
+##### Constructor
+```csharp
+public MBSingleReleaseService()
+{
+    CallManager = new CallManager();
+    MusicBrainzDTO = new DTO<SingleReleaseReponse>();
+}
+```
+##### Requesting and Parsing the Data
+```csharp
+public async Task MakeMusicRequestAsync(string query)
+{
+    MusicResponse = await CallManager.MakeRequestAsync(query);
+    JSonResponse = JObject.Parse(MusicResponse);
+    MusicBrainzDTO.DeserialiseResponse(MusicResponse);
+}
+```
+
+#### Helper Functions
+Down to the user's discretion
+
+### 1.2.2 The Data model class
+
+#### Dependencies
+
+```csharp
+using MusicBrainzMiniAPiApp.DataHandling;
+```
+#### Namespace
+```csharp
+namespace MusicBrainzMiniAPiApp.Services;
+```
+
+#### Class signature/Interfaces
+Models must implement the `IResponse` interface as below.
+```csharp
+public class SingleReleaseReponse : IResponse
+```
+
+## 1.3 Class Diagram
+
+![ClassDiagram1](https://user-images.githubusercontent.com/106960721/183068795-583e2227-5992-4792-beba-9d9f740e8788.png)
 
 
-
- Start of the sprint. Basic user story with acceptance criteria added to check for valid and invalid inputs.
-  
-## Day 2
-
->
