@@ -90,11 +90,22 @@ We test against three different GET requests, as per the MusicBrainz documentati
 - browse:   ```/<RESULT_ENTITY_TYPE>?<BROWSING_ENTITY_TYPE>=<MBID>&limit=<LIMIT>&offset=<OFFSET>&inc=<INC>```
 - search:   ```/<ENTITY_TYPE>?query=<QUERY>&limit=<LIMIT>&offset=<OFFSET>```
 
-The tests check for the following properties:
+### 1.4.1 Lookup Coverage
+The lookup release tests check for the following properties:
 - title
 - date
 - cover art
 - country
+
+### 1.4.2 Browse Coverage
+The browse release tests check for the following properties:
+- release count
+
+### 1.4.3 Search Coverage
+The search release tests check for the following properties:
+- artist
+- country
+- group type
 
 ## 1.5 Found Defects
 
