@@ -99,5 +99,5 @@ The tests check for the following properties:
 ## 1.5 Found Defects
 
 - The 'status' property is poorly named / confusing
-- The 'date' property is inconsistent
+- The 'date' property is formatted inconsistently
 - Empty search results return with 200 OK
