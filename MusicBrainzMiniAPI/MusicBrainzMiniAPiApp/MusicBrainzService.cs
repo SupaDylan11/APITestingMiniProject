@@ -26,4 +26,9 @@ public class MusicBrainzService
         JSonResponse = JObject.Parse(MusicResponse);
         MusicBrainzDTO.DeserialiseResponse(MusicResponse);
     }
+
+    public string GetTitle()
+    {
+        return (string)JSonResponse["title"];
+    }
 }

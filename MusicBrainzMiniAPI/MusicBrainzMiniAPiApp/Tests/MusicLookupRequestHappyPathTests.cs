@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace MusicBrainzMiniAPiApp.Tests;
 
-public class BasicTests
+public class MusicLookupRequestHappyPathTests
 {
     MusicBrainzService _singleReleaseService;
 
@@ -24,4 +24,17 @@ public class BasicTests
         Assert.That(_singleReleaseService.MusicBrainzDTO.Response.status, Is.Not.Null);
     }
 
+    [Test]
+    public void ValidBasicQuery_GetTitle_ReturnsExpectedTitle()
+    {
+        Assert.That(_singleReleaseService.GetTitle(), Is.EqualTo("Good Times Bad Times / Communication Breakdown"));
+    }
+
+    [Test]
+    public void ValidBasicQuery_GetTitleViaJSON_ReturnExpectedTtile()
+    {
+        Assert.That((string)_singleReleaseService.JSonResponse["title"], Is.EqualTo("Good Times Bad Times / Communication Breakdown"));
+    }
+
+    //return (string) JSonResponse["result"]["title"];
 }
