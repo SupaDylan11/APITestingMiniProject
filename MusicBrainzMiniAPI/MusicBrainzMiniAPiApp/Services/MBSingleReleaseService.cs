@@ -4,7 +4,7 @@ using Newtonsoft.Json.Linq;
 
 namespace MusicBrainzMiniAPiApp.Services;
 
-public class MusicBrainzService
+public class MBSingleReleaseService
 {
     public CallManager CallManager { get; set; }
 
@@ -14,7 +14,7 @@ public class MusicBrainzService
 
     public string MusicResponse { get; set; }
 
-    public MusicBrainzService()
+    public MBSingleReleaseService()
     {
         CallManager = new CallManager();
         MusicBrainzDTO = new DTO<SingleReleaseReponse>();
