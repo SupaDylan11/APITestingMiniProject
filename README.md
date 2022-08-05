@@ -4,7 +4,7 @@
 This is a api mini testing project.
 
 >
-# 1. Instructions
+# 1. Information
 
 ## 1.1 Using the API
 Include the text for Instruction to the API here
@@ -83,4 +83,21 @@ public class SingleReleaseReponse : IResponse
 
 ![ClassDiagram1](https://user-images.githubusercontent.com/106960721/183068795-583e2227-5992-4792-beba-9d9f740e8788.png)
 
+## 1.4 Coverage
+The only entity covered for now is <b>release</b>.
+We test against three different GET requests, as per the MusicBrainz documentation:
+- lookup:   ```/<ENTITY_TYPE>/<MBID>?inc=<INC>```
+- browse:   ```/<RESULT_ENTITY_TYPE>?<BROWSING_ENTITY_TYPE>=<MBID>&limit=<LIMIT>&offset=<OFFSET>&inc=<INC>```
+- search:   ```/<ENTITY_TYPE>?query=<QUERY>&limit=<LIMIT>&offset=<OFFSET>```
 
+The tests check for the following properties:
+- title
+- date
+- cover art
+- country
+
+## 1.5 Found Defects
+
+- The 'status' property is poorly named / confusing
+- The 'date' property is formatted inconsistently
+- Empty search results return with 200 OK
