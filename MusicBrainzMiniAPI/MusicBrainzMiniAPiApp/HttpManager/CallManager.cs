@@ -7,6 +7,8 @@ using System.Threading.Tasks;
 
 namespace MusicBrainzMiniAPiApp.HttpManager;
 
+public enum ResourceType { LOOKUP, BROWSE, SEARCH };
+
 public class CallManager
 {
     private readonly RestClient _client;
@@ -18,11 +20,21 @@ public class CallManager
         _client = new RestClient(AppConfigReader.BaseUrl);
     }
 
-    public async Task<string> MakeRequestAsync(string query)
+    public async Task<string> MakeRequestAsync(ResourceType resource, string query)
     {
         var request = new RestRequest();
         request.AddHeader("Content-Type", "application/json");
-        request.Resource = $"release/{query}?fmt=json";
+        switch (resource)
+        {
+            case (ResourceType.LOOKUP):
+                request.Resource = $"release/{query}?fmt=json";
+                break;
+            case (ResourceType.SEARCH):
+                request.Resource = $"{query}&fmt=json";
+                break;
+            default:
+                throw new ArgumentException();
+        }
         Response = await _client.ExecuteAsync(request);
         return Response.Content;
     }
