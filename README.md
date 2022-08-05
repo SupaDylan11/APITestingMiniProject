@@ -83,5 +83,6 @@ public class SingleReleaseReponse : IResponse
 
 ## 1.3 Class Diagram
 
-Include the class diagram here at the end of the project
+![ClassDiagram1](https://user-images.githubusercontent.com/106960721/183068795-583e2227-5992-4792-beba-9d9f740e8788.png)
+
 
