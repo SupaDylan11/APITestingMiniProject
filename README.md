@@ -103,7 +103,7 @@ The browse release tests check for the following properties:
 
 ### 1.4.3 Search Coverage
 The search artist tests check for the following properties:
-- artist name
+- name
 - country
 - disambiguation type
 - group type
