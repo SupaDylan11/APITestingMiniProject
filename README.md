@@ -3,8 +3,6 @@
 # APITestingMiniProject
 This is a api mini testing project.
 
-[TOC]
-
 >
 # 1. Instructions
 
