@@ -22,7 +22,7 @@ public class MBSingleReleaseService
 
     public async Task MakeMusicRequestAsync(string query)
     {
-        MusicResponse = await CallManager.MakeRequestAsync(query);
+        MusicResponse = await CallManager.MakeRequestAsync(ResourceType.LOOKUP, query);
         JSonResponse = JObject.Parse(MusicResponse);
         MusicBrainzDTO.DeserialiseResponse(MusicResponse);
     }
