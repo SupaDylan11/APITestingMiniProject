@@ -31,4 +31,8 @@ public class MBSingleReleaseService
     {
         return (string)JSonResponse["title"];
     }
+    public string GetStatus() 
+    {
+        return CallManager.Response.StatusCode.ToString();
+    }
 }
