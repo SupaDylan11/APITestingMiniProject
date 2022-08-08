@@ -28,5 +28,10 @@ namespace MusicBrainzMiniAPiApp.Services
         {
             return (string)JSonResponse["title"][index];
         }
+
+        public int GetStatus()
+        {
+            return (int)CallManager.Response.StatusCode;
+        }
     }
 }

@@ -21,9 +21,9 @@ namespace MusicBrainzMiniAPiApp.Tests
         }
 
         [Test]
-        public void ValidBasicQueryStatus_Is200()
+        public void ValidBrowseReleaseQueryStatus_Is200()
         {
-            Assert.That(_browseReleaseRequest.ArtistReleasesDTO.Response.releases, Is.Not.Null);
+            Assert.That(_browseReleaseRequest.GetStatus(), Is.EqualTo(200));
         }
 
         [Test]
