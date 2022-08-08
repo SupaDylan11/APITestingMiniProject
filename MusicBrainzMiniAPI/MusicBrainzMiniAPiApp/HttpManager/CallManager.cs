@@ -32,6 +32,9 @@ public class CallManager
             case (ResourceType.SEARCH):
                 request.Resource = $"{query}&fmt=json";
                 break;
+            case (ResourceType.BROWSE):
+                request.Resource = $"release?artist={query}&fmt=json";
+                break;
             default:
                 throw new ArgumentException();
         }

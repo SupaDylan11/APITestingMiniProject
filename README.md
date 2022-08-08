@@ -84,7 +84,7 @@ public class SingleReleaseReponse : IResponse
 ![ClassDiagram1](https://user-images.githubusercontent.com/106960721/183068795-583e2227-5992-4792-beba-9d9f740e8788.png)
 
 ## 1.4 Coverage
-The only entity covered for now is <b>release</b>.
+The only entities covered for now are <b>release</b> and <b>artist</b>.
 We test against three different GET requests, as per the MusicBrainz documentation:
 - lookup:   ```/<ENTITY_TYPE>/<MBID>?inc=<INC>```
 - browse:   ```/<RESULT_ENTITY_TYPE>?<BROWSING_ENTITY_TYPE>=<MBID>&limit=<LIMIT>&offset=<OFFSET>&inc=<INC>```
@@ -102,9 +102,10 @@ The browse release tests check for the following properties:
 - release count
 
 ### 1.4.3 Search Coverage
-The search release tests check for the following properties:
-- artist
+The search artist tests check for the following properties:
+- name
 - country
+- disambiguation type
 - group type
 
 ## 1.5 Found Defects
