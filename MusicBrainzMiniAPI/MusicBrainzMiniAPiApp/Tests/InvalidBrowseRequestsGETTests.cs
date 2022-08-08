@@ -21,9 +21,9 @@ namespace MusicBrainzMiniAPiApp.Tests
         }
 
         [Test]
-        public void GivenInvalidArtistGivenOnSETUP_ReturnEmptyArray()
+        public void InValidBrowseReleaseQueryStatus_Is400Error()
         {
-            Assert.That(_browseReleaseRequest.ArtistReleasesDTO.Response.releases, Is.Null);
+            Assert.That(_browseReleaseRequest.GetStatus(), Is.EqualTo(400));
         }
     }
 }
